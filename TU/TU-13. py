@@ -1,0 +1,9 @@
+Numbers = []
+number = int(input("how many Numbers do you want:"))
+for i in range(number):
+    Character = int(input("Add a number:"))
+    Numbers.append(Character)
+print("this is the sum of your numbers",sum(Numbers))
+print("this is the smallest number", min(Numbers))
+print("this is the biggest number", max(Numbers))
+print(sum(Numbers)/len(Numbers), "is the average of your numbers")
