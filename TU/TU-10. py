@@ -1,0 +1,11 @@
+import random
+Choosen_Name = ["Jack","James","Josh","John","Taylor"]
+for i in range(1,6):
+    chosen = random.choice(Choosen_Name)
+    print(chosen)
+    question = input("do you want to remove this?:")
+    if question in ["Y","y","Yes","yes","YES"]:
+        Choosen_Name.remove(chosen)
+    else:
+        pass
+print(Choosen_Name)
