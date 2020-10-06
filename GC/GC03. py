@@ -1,0 +1,3 @@
+countdown = int(input("how many seconds is your countdown?:"))
+for i in range(countdown,-1,-1):
+    print(i)
