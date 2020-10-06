@@ -1,0 +1,5 @@
+import random
+students = int(input("how many students are in your class?:"))
+comments = ["very good!", "perfect", "could be better","nice"]
+for i in range(students):
+    print("student", i+1, random.choice(comments))
