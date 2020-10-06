@@ -1,0 +1,11 @@
+import random 
+random=random.randint(1,100)
+while True:
+    theirnumber= int(input("What is your guess?:"))
+    if random < theirnumber :
+        print("sorry, your number is too big")
+    elif random == theirnumber:
+        print("yay you guessed the correct number")
+        break
+    else :
+        print("sorry, your number is too small")
