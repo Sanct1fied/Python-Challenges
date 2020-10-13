@@ -1,0 +1,6 @@
+mystring = input("what is your text?:")
+
+if 'qwerty' in mystring:
+    print("the characters 'qwerty' appear in your text")
+else:
+    print("the characters 'qwerty' do not appear in your text")
