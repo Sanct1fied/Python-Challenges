@@ -1,0 +1,10 @@
+import random
+numberlist = []
+for i in range(50):
+    numberlist.append(random.randint(0,100))
+print(numberlist)
+mean = sum(numberlist)/50
+print(mean,"is your mean average")
+small = min(numberlist)
+big = max(numberlist)
+print(small, "is your smallest number and", big, "is your biggest")
