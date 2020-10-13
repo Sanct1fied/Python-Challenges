@@ -1,0 +1,8 @@
+balance = int(input("how much money do you have in your account?:"))
+money = int(input("how much money are you withdrawing?:"))
+if money % 5 == 0:
+    print("the transaction has been successful!")
+    balance = balance-money-0.5
+else:
+    pring("the transaction has been unsuccessful")
+print("your balance after the transaction is", balance)
