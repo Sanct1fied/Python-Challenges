@@ -1,0 +1,8 @@
+import turtle
+text = input("what is your word?:")
+turtle.write(text)
+length = len(text)
+line = length*6
+turtle.forward(line)
+turtle.penup()
+turtle.forward(line)
