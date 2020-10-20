@@ -1,0 +1,13 @@
+rugbyteam1 = input("what is the 1st team competing?:")
+rugbyteam2 = input("which team played against team 1:")
+score = int(input("how many trys did team 1 score?:"))
+score2 = int(input("how many trys did team 2 score?:"))
+penalty = int(input("how many penalties did team 1 score?:"))
+penalty2 = int(input("how many penalties did team 2 score?:"))
+team1score = score+penalty
+team2score = penalty2+score2
+penalties = penalty+penalty2
+totaltry = score+score2
+print(rugbyteam1, "scored", team1score, "and", rugbyteam2, "scored", team2score)
+print("there was", penalties, "penalties scored")
+print("there was", totaltry, "trys scored")
