@@ -1,0 +1,7 @@
+import turtle
+sides = int(input("how many sides does your shape have?:"))
+angle = (sides-2)*180
+angle1 = angle/sides
+for i in range(sides):
+    turtle.forward(50)
+    turtle.left(180-angle1)
