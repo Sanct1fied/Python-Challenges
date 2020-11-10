@@ -1,0 +1,8 @@
+import random
+import turtle
+path = int(input("how far is your pirate going (km)?:"))
+
+for i in range(path):
+    turtle.fd(100)
+    turn = random.randint(0,360)
+    turtle.left(turn)
