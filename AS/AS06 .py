@@ -1,4 +1,4 @@
-vowel = ["a","e","i","o","u"]
+vowel = ["a","e","i","o","u","A","E","I","O","U"]
 word = str(input("what is your word?:"))
 integer = 0
 word2 = [char for char in word]
