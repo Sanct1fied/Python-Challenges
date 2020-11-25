@@ -1,4 +1,4 @@
-quation = str(input("What is your equation?:"))
+equation = str(input("What is your equation?:"))
 equation = [char for char in equation]
 leftbracket = ["("]
 rightbracket = [")"]
