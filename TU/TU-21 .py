@@ -33,7 +33,7 @@ returning = input("\nDo you want to purchase a return ticket?:")
 
 if returning in ["yes","yeah"]:
     return_choice = int(input("\nChoose your Bus. Please enter 09:30 [1],11:30 [3],13:30 [5] or 15:30 [7]: "))
-    if bus_choice not in [1, 3, 5, 7]:
+    if return_choice not in [1, 3, 5, 7]:
         print("Not a valid bus from KL City Centre.")
     print("Bus time chosen:", bus_time[bus_choice])
     bus_capacity[return_choice] = bus_capacity[return_choice] - 1
