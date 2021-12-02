@@ -8,8 +8,15 @@ with open("A216.txt","r") as whole_file:
     new_word = []
 
 
-    for i in range(length):
-        new_char = random.choice(characters)
-        characters.remove(new_char)
-        new_word.append(new_char)
-        print(*new_word,sep="")
+    for i in range(length*26):
+        for i in range(length):
+            new_char = random.choice(characters)
+            characters.remove(new_char)
+            new_word.append(new_char)
+            if new_word == characters:
+                length=1
+                pass
+            else:
+                anagram = new_word
+                
+        if anagram in 
