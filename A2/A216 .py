@@ -20,11 +20,8 @@ for i in range(length*26):
     new_word = []
     for i in range(length):
         new_char = random.choice(characters)
-        print(new_char)
         characters.remove(new_char)
-        new_word += new_char
-        possible_combinations.append(new_word)
-        print(possible_combinations)
+        new_word.append(new_char)
 
         if new_word in possible_combinations:
             length = length + 1
@@ -35,7 +32,11 @@ for i in range(length*26):
         else:
             anagram = new_word
 
+        for i in range(length):
+            anagram =  + anagram[i]
         print(anagram)
 
         if anagram in my_words:
             print(anagram)
+
+
