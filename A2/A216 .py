@@ -1,3 +1,5 @@
+#currently works fine for up to 7 letter words, 8 letters or more are a WIP
+
 import random
 my_words = []
 
@@ -14,29 +16,29 @@ length = len(word)
 possible_combinations = []
 
 
-for i in range(length*26):
-    characters = [char for char in word]
-    anagram = []
-    new_word = []
-    for i in range(length):
-        new_char = random.choice(characters)
-        characters.remove(new_char)
-        new_word.append(new_char)
+def acquiringallpossiblecombinations(word):
+    allpossiblecombinations = []
+    wordy = [char for char in word] #split the word into its letters
+    threedigits = [] #placeholder
+    onedigit = []    #placeholder
+    for p in range(9999990): #bare with me
+        wordy = [char for char in word] #temp variable to keep split word intact
+        for l in range(len(wordy)):
+            onedigit = random.choice(wordy) #picks a random letter
+            wordy.remove(onedigit) #removes that letter from the temp variable so it cant be chosen again
+            threedigits.append(onedigit) #adds that to a placeholder word
 
-        if new_word in possible_combinations:
-            length = length + 1
-            pass
-        elif new_word == characters:
-            length= length + 1
-            pass
+        if ''.join(threedigits) in allpossiblecombinations: #checks if we have already randomly generated that word
+            pass #pass if we have
         else:
-            anagram = new_word
+            threedigits = ''.join(threedigits)  #adds it if we havent
+            allpossiblecombinations.append(threedigits)
+        threedigits = [] #empty it again so we can use it in the next loop
+    return allpossiblecombinations
 
-        for i in range(length):
-            anagram =  + anagram[i]
-        print(anagram)
-
-        if anagram in my_words:
-            print(anagram)
+checking = acquiringallpossiblecombinations(word) #return from the function
 
 
+for v in range(len(checking)):
+    if checking[v] in my_words: #checking if its a real word
+        print(checking[v])         #prints it if it is
